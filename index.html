@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome SDK -->
+    <script src="https://kit.fontawesome.com/4e9ef12d90.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Password Generator</h1>
+        </header>
+        <div class="card">
+            <div class="card-header">
+                <h2>Generate a Password</h2>
+            </div>
+            <input readonly type="text" id="password" placeholder="Your Secure Password" aria-label="Generated Password"></input>
+            <div class="card-body">
+                <label for="length">Length</label>
+                <input type="number" id="length"> <br>
+                <label for="lower">Lowercase Letters</label>
+                <input type="checkbox" id="lower"> <br>
+                <label for="upper">Uppcase Letters</label>
+                <input type="checkbox" id="upper"> <br>
+                <label for="numbers">Numbers</label>
+                <input type="checkbox" id="numbers"> <br>
+                <label for="special">Special Characters</label>
+                <input type="checkbox" id="special"> <br> <br>
+                <div class="clipboard shadow" id="clipboard" onclick="copy()">
+                    Copy to Clipboard
+                    <i class="far fa-clipboard"></i>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button id="generate" class="btn shadow">Generate Password</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
