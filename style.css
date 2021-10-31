@@ -127,9 +127,15 @@ button[disabled] {
     padding: 2%;
     border: solid 2px rgb(175, 8, 8);
     background-color: rgb(175, 8, 8);
-    border-radius: 15px;
+    border-radius: 20px;
     color: white;
     cursor: pointer;
+    width: 33%;
+}
+
+.clipboard:hover,
+.btn:hover {
+    opacity: 0.75;
 }
 
 .shadow {
@@ -146,6 +152,11 @@ label {
 
 input[type=number] {
     width: 20%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 690px) {
