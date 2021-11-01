@@ -78,3 +78,17 @@
      const symbols = "~!@#$%^&*()_+`-=<>?/.,';:[]{}";
      return symbols[Math.floor(Math.random() * symbols.length)]
  }
+
+ // Copy Function
+ document.addEventListener('DOMContentLoaded', function() {
+     let copyButton = document.getElementById('clipboard');
+     copyButton.addEventListener('click', function() {
+         navigator.clipboard
+             .writeText(document.getElementById('result').innerText)
+             .then(
+                 success => console.log("text copied"), err => console.log("error copying text")
+             );
+         console.log(document.getElementById('result').innerText);
+         alert('Password copied');
+     });
+ });
