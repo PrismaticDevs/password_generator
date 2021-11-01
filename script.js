@@ -1,80 +1,80 @@
-// DOM Elements
-const resultElement = document.getElementById("password");
-const lengthElement = document.getElementById("length");
-const upperElement = document.getElementById("upper");
-const lowerElement = document.getElementById("lower");
-const numbersElement = document.getElementById("numbers");
-const specialElement = document.getElementById("special");
-const generate = document.getElementById("generate");
-const clipboard = document.getElementById("clipboard");
+ // DOM Elements
+ const resultEl = document.getElementById('result');
+ const lengthEl = document.getElementById('length');
+ const uppercaseEl = document.getElementById('uppercase');
+ const lowercaseEl = document.getElementById('lowercase');
+ const numbersEl = document.getElementById('numbers');
+ const symbolsEl = document.getElementById('symbols');
+ const generateEl = document.getElementById('generate');
+ const clipboardEl = document.getElementById('clipboard');
 
-// Functions Object
-const randomFunc = {
-    lower: randomLower,
-    upper: randomUpper,
-    number: randomNumber,
-    special: randomSpecial
-}
+ // Random Func Object
+ const randomFunc = {
+     lower: getRandomLower(),
+     upper: getRandomUpper(),
+     number: getRandomNumber(),
+     symbol: getRandomSymbol()
+ };
 
-//  Generate Event Listener
-resultElement.innerText = generate.addEventListener('click', () => {
-    const length = +lengthElement.value;
-    const hasLower = lowerElement.checked
-    const hasUpper = upperElement.checked
-    const hasNumber = numbersElement.checked
-    const hasSpecial = specialElement.checked
-    password.innerText = generatePassword(length, hasLower, hasUpper, hasNumber, hasSpecial);
-    console.log(length, ' length ', hasUpper, 'upper', hasSpecial, 'special', hasNumber, "number", hasLower, )
-});
+ // Generate Click Event Listener
+ generateEl.addEventListener('click', () => {
+     const length = +lengthEl.value;
+     const hasLower = lowercaseEl.checked;
+     const hasUpper = uppercaseEl.checked;
+     const hasNumber = numbersEl.checked;
+     const hasSymbol = symbolsEl.checked;
+     resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+ });
 
-// Generate password function
-function generatePassword(lower, upper, number, special, length) {
-    // Init pw var
-    let generatedPassword = '';
-    // Filter outn unckecked items
-    const typesCount = lower + upper + special + number;
-    console.log("types: ", typesCount)
-        // Loop over length and call generator function for each type
-    const typesArr = [{
-        lower
-    }, {
-        upper
-    }, {
-        number
-    }, {
-        special
-    }].filter(
-        item => Object.values(item)[0]
-    );
-    console.log('typesArr: ', typesArr);
-    if (typesCount === 0) {
-        return '';
-    }
+ // Generate Password Function 
+ function generatePassword(lower, upper, number, symbol, length) {
+     // 1. Init pw var
+     let generatedPassword = '';
+     // 2. Filter out unchecked types
+     const typesCount = lower + upper + number + symbol;
+     //  console.log('typesCount: ', typesCount);
+     const typesArr = [{
+         lower
+     }, {
+         upper
+     }, {
+         number
+     }, {
+         symbol
+     }].filter(item => Object.values(item)[0]);
+     //  console.log('typesArr: ', typesArr);
+     if (typesCount === 0) {
+         return '';
+     }
+     //  console.log(length);
+     // 3. Loop over length calling generator function for each type
+     for (let i = 0; i < length; i += typesCount) {
+         typesArr.forEach(type => {
+             const funcName = Object.keys(type)[0];
+             //  console.log('funcName: ', funcName)
+             generatedPassword += randomFunc[funcName]
 
-    for (let i = 0; i < length; i += typesCount) {
-        typesArr.forEach(type => {
-            const funcName = Object.keys(type)[0];
-            console.log('funcName: ', funcName)
-            generatePassword += randomFunc[funcName]();
-        });
+         });
+     }
+     // 4. Add pw to pw var and return   
+     const finalPassword = generatedPassword.slice(0, length);
+     return finalPassword;
+ }
 
-    }
-    // Assign pw var to the pw
-}
-
-function randomLower() {
-    return String.fromCharCode(Math.floor(Math.random() * 26 + 97));
-}
-
-function randomUpper() {
-    return String.fromCharCode(Math.floor(Math.random() * 26 + 65));
-}
-
-function randomNumber() {
-    return String.fromCharCode(Math.floor(Math.random() * 10 + 48));
-}
-
-function randomSpecial() {
-    const symbols = "~!@#$%^&*()_+|?><:,./;'";
-    return symbols[Math.floor(Math.random() * symbols.length)];
-}
+ // Random Lowercase
+ function getRandomLower() {
+     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+ }
+ // Random Uppercase
+ function getRandomUpper() {
+     return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+ }
+ // Random Number
+ function getRandomNumber() {
+     return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+ }
+ // Random Symbol
+ function getRandomSymbol() {
+     const symbols = "~!@#$%^&*()_+`-=<>?/.,';:[]{}";
+     return symbols[Math.floor(Math.random() * symbols.length)]
+ }
