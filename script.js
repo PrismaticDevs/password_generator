@@ -54,3 +54,8 @@ function randomize() {
     result.innerText = finalPassword.join('');
 }
 // Copy Function
+function copy() {
+    navigator.clipboard.writeText(result.innerText).then(function() {}, function() {
+        console.error('Server unable to copy text')
+    });
+}
