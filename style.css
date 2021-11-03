@@ -113,7 +113,7 @@ button[disabled] {
     appearance: none;
     border: none;
     display: block;
-    width: 50%;
+    width: 100%;
     padding-top: 8px;
     padding-left: 8px;
     padding-right: 8px;

@@ -23,7 +23,7 @@
             <div class="center">
                 <span id="result">Your Password</span>
             </div>
-            <div class="card-body">
+            <!-- <div class="card-body">
                 <label for="length">Length</label>
                 <input type="number" id="length"> <br>
                 <label for="lower">Lowercase</label>
@@ -34,12 +34,12 @@
                 <input type="checkbox" id="numbers"> <br>
                 <label for="symbols">Symbols</label>
                 <input type="checkbox" id="symbols"> <br> <br>
-            </div>
+            </div> -->
             <div class="card-footer">
-                <div id="generate" class="btn shadow">Generate Password</div>
+                <div id="generate" class="btn shadow" onclick="randomize()">Generate Password</div>
             </div>
             <div class="center">
-                <div class="btn clipboard shadow" id="clipboard">
+                <div class="btn clipboard shadow" id="clipboard" onclick=copy()>
                     Copy to Clipboard
                     <i class="far fa-clipboard"></i>
                 </div>
