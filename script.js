@@ -27,10 +27,10 @@ function randomize() {
     // Prompts for password components
     let desiredLength = prompt(`Choose the Password's Length`);
     console.log(desiredLength.valueOf());
-    let desiredLower = prompt(`How many Lowercase Letters?`);
-    let desiredUpper = prompt(`How many Uppercase Letters?`);
-    let desiredNumber = prompt(`How many Uppercase Letters?`);
-    let desiredSymbol = prompt(`How many Numbers?`);
+    let desiredLower = prompt(`How Many Lowercase Letters?`);
+    let desiredUpper = prompt(`How Many Uppercase Letters?`);
+    let desiredNumber = prompt(`How Many Numbers?`);
+    let desiredSymbol = prompt(`How Many Symbols?`);
     let finalPassword = [];
     let lowercase = getRandomLower();
     let uppercase = getRandomUpper();
