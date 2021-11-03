@@ -55,7 +55,10 @@ function randomize() {
 }
 // Copy Function
 function copy() {
-    navigator.clipboard.writeText(result.innerText).then(function() {}, function() {
-        console.error('Server unable to copy text')
-    });
+    navigator.clipboard.writeText(result.innerText)
+        .then(function() {
+            alert('Password Successfully Copied')
+        }, function() {
+            alert('Server unable to copy password');
+        });
 }
