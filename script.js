@@ -1,4 +1,6 @@
 // Password Generator
+
+// HTML Elements
 const result = document.getElementById('result');
 const copyButton = document.getElementById('clipboard');
 
@@ -22,29 +24,58 @@ function getRandomSymbol() {
     const symbols = "~!@#$%^&*()_+`-=<>?/,';:[]{}";
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
-// Randomization function
+// Randomized Components
+let lowercase = getRandomLower();
+let uppercase = getRandomUpper();
+let number = getRandomNumber();
+let symbol = getRandomSymbol();
+// Randomization Function
 function randomize() {
-    // Prompts for password components
+    // Prompts for Password Desired Components
     let desiredLength = prompt(`Choose the Password's Length`);
     let desiredUpper = confirm(`Uppercase Letters?`);
     let desiredNumber = confirm(`Numbers?`);
     let desiredSymbol = confirm(`Symbols?`);
     let finalPassword = [];
-    let lowercase = getRandomLower();
-    let uppercase = getRandomUpper();
-    let number = getRandomNumber();
-    let symbol = getRandomSymbol();
-    finalPassword.push(lowercase)
-    if (desiredNumber) {
-        finalPassword.push(number);
+    // Length
+    parseInt(desiredLength)
+    if (desiredLength < 8 || desiredLength > 128) {
+        desiredLength = prompt('Please choose a length of 8 or more.');
+        if (desiredLength < 8) {
+            desiredLength = prompt('Password must be a length of 8 or more.');
+            if (desiredLength < 8) {
+                alert('Apassword is too short and is not secure. Try again.');
+                return;
+            }
+        }
+        if (desiredLength > 128) {
+            desiredLength = prompt('Password must be between 8 and 128 characters');
+            if (desiredLength < 128) {
+                alert('Apassword is too long. Try again.');
+                return;
+            }
+        }
     }
-    if (desiredUpper) {
-        finalPassword.push(uppercase);
+    // Iterates Over Desired Length
+    for (let i = 0; i < desiredLength; i++) {
+        finalPassword.push(lowercase[i]);
+        // If Check Numbers
+        if (desiredNumber) {
+            const finalNumber = getRandomNumber()
+            finalPassword.push(finalNumber);
+        }
+        // If Check Uppercase 
+        if (desiredUpper) {
+            const finalUpper = getRandomUpper()
+            finalPassword.push(finalUpper);
+        }
+        // If Check Symbols
+        if (desiredSymbol) {
+            const finalSymbol = getRandomSymbol()
+            finalPassword.push(finalSymbol);
+        }
     }
-    if (desiredSymbol) {
-        finalPassword.push(symbol);
-    }
-    // Randomize the Array
+    // Randomize Order of Array
     function shuffleArray(array) {
         let curId = array.length;
         while (0 !== curId) {
@@ -57,10 +88,11 @@ function randomize() {
         return array;
     }
     shuffleArray(finalPassword);
-    // Put the finished password into the HTML 
+    // Insert finished password into HTML 
     result.innerText = finalPassword.join('');
+    return finalPassword;
 }
-// Copy Function
+// Copies Password to Clipboard
 function copy() {
     navigator.clipboard.writeText(result.innerText)
         .then(function() {
