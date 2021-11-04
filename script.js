@@ -26,17 +26,24 @@ function getRandomSymbol() {
 function randomize() {
     // Prompts for password components
     let desiredLength = prompt(`Choose the Password's Length`);
-    console.log(desiredLength.valueOf());
-    let desiredLower = prompt(`How Many Lowercase Letters?`);
-    let desiredUpper = prompt(`How Many Uppercase Letters?`);
-    let desiredNumber = prompt(`How Many Numbers?`);
-    let desiredSymbol = prompt(`How Many Symbols?`);
+    let desiredUpper = confirm(`Uppercase Letters?`);
+    let desiredNumber = confirm(`Numbers?`);
+    let desiredSymbol = confirm(`Symbols?`);
     let finalPassword = [];
     let lowercase = getRandomLower();
     let uppercase = getRandomUpper();
     let number = getRandomNumber();
     let symbol = getRandomSymbol();
-    finalPassword.push(lowercase, uppercase, number, symbol);
+    finalPassword.push(lowercase)
+    if (desiredNumber) {
+        finalPassword.push(number);
+    }
+    if (desiredUpper) {
+        finalPassword.push(uppercase);
+    }
+    if (desiredSymbol) {
+        finalPassword.push(symbol);
+    }
     // Randomize the Array
     function shuffleArray(array) {
         let curId = array.length;
