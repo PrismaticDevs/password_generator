@@ -1,5 +1,5 @@
 // Password Generator
-
+// I like otters, I like platypuses, and I like hedgehogs
 // HTML Elements
 const result = document.getElementById('result');
 const copyButton = document.getElementById('clipboard');
@@ -57,7 +57,7 @@ function randomize() {
         }
     }
     // Iterates Over Desired Length
-    for (let i = 0; i < desiredLength; i++) {
+    for (let i = 0; i <= desiredLength; i++) {
         finalPassword.push(lowercase[i]);
         // If Check Numbers
         if (desiredNumber) {
