@@ -61,24 +61,19 @@ function randomize() {
     for (let i = 0; i < desiredLength; i++) {
         // Lowercase
         if (lowercase) {
-            finalPassword.push(lowercase);
-            //types++
+            finalPassword.push(getRandomLower());
             console.log(finalPassword);
         }
         // If Check Numbers
         if (desiredNumber) {
             const finalNumber = getRandomNumber()
             finalPassword.push(finalNumber);
-            // number = '';
-            types++
             console.log(finalPassword);
         }
         // If Check Uppercase 
         if (desiredUpper) {
             const finalUpper = getRandomUpper()
             finalPassword.push(finalUpper);
-            // uppercase = '';
-            //types++
             console.log(finalPassword);
         }
         // If Check Symbols
