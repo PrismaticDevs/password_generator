@@ -22,7 +22,7 @@ function getRandomNumber() {
 }
 // Random Symbol
 function getRandomSymbol() {
-    const symbols = "~!@#$%^&*()_+`-=<>?/,';:[]{}";
+    const symbols = "~!@#$%^&*()_+`-=<>?';:[]{}";
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
 // Randomized Components
@@ -32,6 +32,7 @@ let number = getRandomNumber();
 let symbol = getRandomSymbol();
 // Randomization Function
 function randomize() {
+    finalPassword = [];
     // Prompts for Password Desired Components
     let desiredLength = prompt(`Choose the Password's Length`);
     let desiredUpper = confirm(`Uppercase Letters?`);
@@ -57,14 +58,18 @@ function randomize() {
         }
     }
     // Iterates Over Desired Length
-    for (let i = 0; i < desiredLength; i += types) {
-        finalPassword.push(lowercase[i]);
-        types++
-        console.log(finalPassword);
+    for (let i = 0; i < desiredLength; i++) {
+        // Lowercase
+        if (lowercase) {
+            finalPassword.push(lowercase);
+            //types++
+            console.log(finalPassword);
+        }
         // If Check Numbers
         if (desiredNumber) {
             const finalNumber = getRandomNumber()
             finalPassword.push(finalNumber);
+            // number = '';
             types++
             console.log(finalPassword);
         }
@@ -72,32 +77,36 @@ function randomize() {
         if (desiredUpper) {
             const finalUpper = getRandomUpper()
             finalPassword.push(finalUpper);
-            types++
+            // uppercase = '';
+            //types++
             console.log(finalPassword);
         }
         // If Check Symbols
         if (desiredSymbol) {
             const finalSymbol = getRandomSymbol()
             finalPassword.push(finalSymbol);
-            types++
+            // symbol = '';
+            //types++
             console.log(finalPassword);
         }
-    }
-    // Randomize Order of Array
-    function shuffleArray(array) {
-        let curId = array.length;
-        while (0 !== curId) {
-            let randId = Math.floor(Math.random() * curId);
-            curId -= 1;
-            let tmp = array[curId];
-            array[curId] = array[randId];
-            array[randId] = tmp;
+        // Randomize Order of Array
+        function shuffleArray(array) {
+            let curId = array.length;
+            while (0 !== curId) {
+                let randId = Math.floor(Math.random() * curId);
+                curId -= 1;
+                let tmp = array[curId];
+                array[curId] = array[randId];
+                array[randId] = tmp;
+            }
+            return array;
         }
-        return array;
+        shuffleArray(finalPassword);
     }
-    shuffleArray(finalPassword);
     // Insert finished password into HTML 
-    result.innerText = finalPassword.join('');
+    console.log(finalPassword.length);
+    let x = finalPassword.slice(0, desiredLength);
+    result.innerText = x.join('');
     return finalPassword;
 }
 // Copies Password to Clipboard
