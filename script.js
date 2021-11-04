@@ -98,9 +98,9 @@ function randomize() {
         }
         shuffleArray(finalPassword);
     }
-    // Insert finished password into HTML 
-    console.log(finalPassword.length);
+    // Slices Result to Defined Length
     let x = finalPassword.slice(0, desiredLength);
+    // Insert finished password into HTML 
     result.innerText = x.join('');
     return finalPassword;
 }
