@@ -3,7 +3,8 @@
 // HTML Elements
 const result = document.getElementById('result');
 const copyButton = document.getElementById('clipboard');
-
+let types = 0;
+let finalPassword = [];
 // Random Lowercase
 function getRandomLower() {
     const lowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -36,7 +37,6 @@ function randomize() {
     let desiredUpper = confirm(`Uppercase Letters?`);
     let desiredNumber = confirm(`Numbers?`);
     let desiredSymbol = confirm(`Symbols?`);
-    let finalPassword = [];
     // Length
     parseInt(desiredLength)
     if (desiredLength < 8 || desiredLength > 128) {
@@ -57,22 +57,30 @@ function randomize() {
         }
     }
     // Iterates Over Desired Length
-    for (let i = 0; i <= desiredLength; i++) {
+    for (let i = 0; i < desiredLength; i += types) {
         finalPassword.push(lowercase[i]);
+        types++
+        console.log(finalPassword);
         // If Check Numbers
         if (desiredNumber) {
             const finalNumber = getRandomNumber()
             finalPassword.push(finalNumber);
+            types++
+            console.log(finalPassword);
         }
         // If Check Uppercase 
         if (desiredUpper) {
             const finalUpper = getRandomUpper()
             finalPassword.push(finalUpper);
+            types++
+            console.log(finalPassword);
         }
         // If Check Symbols
         if (desiredSymbol) {
             const finalSymbol = getRandomSymbol()
             finalPassword.push(finalSymbol);
+            types++
+            console.log(finalPassword);
         }
     }
     // Randomize Order of Array
@@ -98,6 +106,6 @@ function copy() {
         .then(function() {
             alert('Password Successfully Copied')
         }, function() {
-            alert('Server unable to copy password');
+            alert('Unable to Copy Password');
         });
 }
