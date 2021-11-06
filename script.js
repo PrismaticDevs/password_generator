@@ -101,6 +101,11 @@ function randomize() {
     let x = finalPassword.slice(0, desiredLength);
     // Insert finished password into HTML 
     result.innerText = x.join('');
+    if (desiredNumber && desiredUpper && desiredSymbol) {
+        alert('You chose to create a very safe password.')
+    } else {
+        alert('The password you chose is not as safe as it could be.')
+    }
 
 } /* End of randomize() Function */
 
