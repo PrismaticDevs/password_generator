@@ -40,9 +40,9 @@ function randomize() {
     let desiredSymbol = confirm(`Symbols?`);
     // Length
     if (isNaN(desiredLength)) {
-        desiredLength = prompt('Length must be a number.');
+        desiredLength = prompt('Length must be a number from 8-128.');
         if (isNaN(desiredLength)) {
-            desiredLength = prompt('Last try! Length MUST be a number.');
+            desiredLength = prompt('Last try! Length MUST be a number from 8-128.');
         }
     }
     if (desiredLength < 8 || desiredLength > 128) {
