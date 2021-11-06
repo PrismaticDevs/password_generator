@@ -46,20 +46,20 @@ function randomize() {
         }
     }
     if (desiredLength < 8 || desiredLength > 128) {
-        desiredLength = prompt('Please choose a length of 8 or more.');
+        desiredLength = prompt('Please choose a length between 8-128.');
         if (desiredLength < 8) {
-            desiredLength = prompt('Password must be a length of 8 or more.');
+            desiredLength = prompt('Password must be a length of between 8-128.');
             if (desiredLength < 8) {
                 alert('Apassword is too short and is not secure. Try again.');
                 return;
             }
         }
+    }
+    if (desiredLength > 128) {
+        desiredLength = prompt('Password must be between 8 and 128 characters');
         if (desiredLength > 128) {
-            desiredLength = prompt('Password must be between 8 and 128 characters');
-            if (desiredLength < 128) {
-                alert('Apassword is too long. Try again.');
-                return;
-            }
+            alert('Apassword is too long. Try again.');
+            return;
         }
     }
     // Iterates Over Desired Length
