@@ -39,7 +39,12 @@ function randomize() {
     let desiredNumber = confirm(`Numbers?`);
     let desiredSymbol = confirm(`Symbols?`);
     // Length
-    parseInt(desiredLength)
+    if (isNaN(desiredLength)) {
+        desiredLength = prompt('Length must be a number.');
+        if (isNaN(desiredLength)) {
+            desiredLength = prompt('Last try! Length MUST be a number.');
+        }
+    }
     if (desiredLength < 8 || desiredLength > 128) {
         desiredLength = prompt('Please choose a length of 8 or more.');
         if (desiredLength < 8) {
@@ -62,27 +67,21 @@ function randomize() {
         // Lowercase
         if (lowercase) {
             finalPassword.push(getRandomLower());
-            console.log(finalPassword);
         }
         // If Check Numbers
         if (desiredNumber) {
             const finalNumber = getRandomNumber()
             finalPassword.push(finalNumber);
-            console.log(finalPassword);
         }
         // If Check Uppercase 
         if (desiredUpper) {
             const finalUpper = getRandomUpper()
             finalPassword.push(finalUpper);
-            console.log(finalPassword);
         }
         // If Check Symbols
         if (desiredSymbol) {
             const finalSymbol = getRandomSymbol()
             finalPassword.push(finalSymbol);
-            // symbol = '';
-            //types++
-            console.log(finalPassword);
         }
         // Randomize Order of Array
         function shuffleArray(array) {
@@ -102,8 +101,9 @@ function randomize() {
     let x = finalPassword.slice(0, desiredLength);
     // Insert finished password into HTML 
     result.innerText = x.join('');
-    return finalPassword;
-}
+
+} /* End of randomize() Function */
+
 // Copies Password to Clipboard
 function copy() {
     navigator.clipboard.writeText(result.innerText)
