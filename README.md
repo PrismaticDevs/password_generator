@@ -16,12 +16,18 @@ This is a functional password generating web app that uses JavaScript under the 
 ## Video
 gif or video of app working
 ## Instructions
-
+<ol>
+  <li>Follow prompts</li>
+  <li>Select desired password lenth</li>
+  <li>Select if you desire uppercase letters, numbers, and special characters or symbols</li>
+  <li>Click the "Generate Password" button</li>
+  <li>Click the "Copy" button to copy your generated password to the clipboard</li>
+ <ol>
 ## License
 This application is licensed under MIT
-## Contact Info:
--du email
--linkedin 
--github address
+## Contact
+<a href="https://matthewbrignola@du.edu">Email</a>
+<a href="https://www.linkedin.com/in/matthewbrignola/">LinkedIn</a>
+<a gref="https://github.com/PrismaticDevelopmentStudios">GitHub</a>
 
 
