@@ -18,8 +18,8 @@ gif or video of app working
 <a href="https://github.com/PrismaticDevelopmentStudios">GitHub</a>
 ## Instructions
 <ol>
-  <li>Follow prompts</li>
   <li>Select desired password lenth</li>
+  <li>Select if you want capital letters, numbers, or special characters</li>
   <li>Select if you desire uppercase letters, numbers, and special characters or symbols</li>
   <li>Click the "Generate Password" button</li>
   <li>Click the "Copy" button to copy your generated password to the clipboard</li>
