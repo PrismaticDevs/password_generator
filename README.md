@@ -15,6 +15,10 @@ This is a functional password generating web app that uses JavaScript under the 
 <a href=""></a>
 ## Video
 gif or video of app working
+## Contact
+<a href="https://matthewbrignola@du.edu">Email</a>
+<a href="https://www.linkedin.com/in/matthewbrignola/">LinkedIn</a>
+<a gref="https://github.com/PrismaticDevelopmentStudios">GitHub</a>
 ## Instructions
 <ol>
   <li>Follow prompts</li>
@@ -23,9 +27,5 @@ gif or video of app working
   <li>Click the "Generate Password" button</li>
   <li>Click the "Copy" button to copy your generated password to the clipboard</li>
  <ol>
-## Contact
-<a href="https://matthewbrignola@du.edu">Email</a>
-<a href="https://www.linkedin.com/in/matthewbrignola/">LinkedIn</a>
-<a gref="https://github.com/PrismaticDevelopmentStudios">GitHub</a>
 
 
