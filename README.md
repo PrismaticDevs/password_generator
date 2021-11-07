@@ -4,11 +4,11 @@
 This is a functional HTML & CSS password generating web app that uses JavaScript under the hood to generate a random password based on the user's specifications. 
 
 ## Table of Contents
+* [Contact](#contact)
 * [Video](#video)
 * [Instructions](#instructions)
 * [Technologies](#technologies)  
-* [License](#license)
-* [Contact](#contact)
+
 
 ## Video
 gif or video of app working
