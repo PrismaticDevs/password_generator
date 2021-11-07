@@ -13,6 +13,10 @@ This is a functional HTML & CSS password generating web app that uses JavaScript
 <a href="https://matthewbrignola@du.edu">Email</a> <br>
 <a href="https://www.linkedin.com/in/matthewbrignola/">LinkedIn</a> <br>
 <a href="https://github.com/PrismaticDevelopmentStudios">GitHub</a> <br>
+## Technologies
+HTML
+CSS
+JavaScript
 ## Video
 gif or video of app working
 ## Instructions
