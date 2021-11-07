@@ -105,7 +105,7 @@ function randomize() {
 
 // Copies Password to Clipboard
 function copy() {
-    navigator.clipboard.writeText(result.innerText)
+    navigator.clipboard.writeText(result.innerHTML)
         .then(function() {
             alert('Password Successfully Copied')
         }, function() {
