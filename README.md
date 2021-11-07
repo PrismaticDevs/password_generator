@@ -23,8 +23,6 @@ gif or video of app working
   <li>Click the "Generate Password" button</li>
   <li>Click the "Copy" button to copy your generated password to the clipboard</li>
  <ol>
-## License
-This application is licensed under MIT
 ## Contact
 <a href="https://matthewbrignola@du.edu">Email</a>
 <a href="https://www.linkedin.com/in/matthewbrignola/">LinkedIn</a>
