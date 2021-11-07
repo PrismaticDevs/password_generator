@@ -1,7 +1,7 @@
 # password_generator
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 ## Descripton
-This is a functional password generating web app that uses JavaScript under the hood. 
+This is a functional HTML & CSS password generating web app that uses JavaScript under the hood to generate a random password based on the user's specifications. 
 
 ## Table of Contents
 * [Video](#video)
