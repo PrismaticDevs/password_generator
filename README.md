@@ -13,9 +13,9 @@ This is a functional HTML & CSS password generating web app that uses JavaScript
 ## Video
 gif or video of app working
 ## Contact
-<a href="https://matthewbrignola@du.edu">Email</a>
-<a href="https://www.linkedin.com/in/matthewbrignola/">LinkedIn</a>
-<a href="https://github.com/PrismaticDevelopmentStudios">GitHub</a>
+<a href="https://matthewbrignola@du.edu">Email</a> <br>
+<a href="https://www.linkedin.com/in/matthewbrignola/">LinkedIn</a> <br>
+<a href="https://github.com/PrismaticDevelopmentStudios">GitHub</a> <br>
 ## Instructions
 <ol>
   <li>Select desired password length between 8 and 128 characters</li>
