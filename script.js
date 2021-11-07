@@ -3,7 +3,6 @@
 // HTML Elements
 const result = document.getElementById('result');
 const copyButton = document.getElementById('clipboard');
-let types = 0;
 let finalPassword = [];
 // Random Lowercase
 function getRandomLower() {
