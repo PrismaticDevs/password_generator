@@ -18,7 +18,7 @@ HTML
 CSS
 JavaScript
 ## Video
-gif or video of app working
+<a href="https://drive.google.com/file/d/1rdUVAkXu3xUkxRjy1xxaRQAPKTaq6YY7/view?usp=sharing">Video Hosted With Google Drive</<a>
 ## Instructions
 <ol>
   <li>Select desired password length between 8 and 128 characters</li>
