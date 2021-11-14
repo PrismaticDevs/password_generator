@@ -29,3 +29,7 @@ JavaScript
   <li>Click the "Copy" button to copy your 
 generated password to the clipboard</li>
  <ol>
+![Screen Shot 2021-11-14 at 10 54 18 AM](https://user-images.githubusercontent.com/34839284/141692779-0b48e08b-131d-4797-83cb-af3e2d029afd.png)
+![Screen Shot 2021-11-14 at 10 54 35 AM](https://user-images.githubusercontent.com/34839284/141692788-068171aa-e211-48a4-92ce-3edcef8b6c5f.png)
+![Screen Shot 2021-11-14 at 10 55 03 AM](https://user-images.githubusercontent.com/34839284/141692793-a2976e74-9a3c-48f4-bafa-53242401f34f.png)
+![Screen Shot 2021-11-14 at 10 55 11 AM](https://user-images.githubusercontent.com/34839284/141692798-2c049ba9-fb7e-4eda-a553-eda225a2598a.png)
