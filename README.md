@@ -25,7 +25,7 @@ JavaScript
   - Select desired password length between 8 and 128 characters
 ![Screen Shot 2021-11-14 at 10 54 35 AM](https://user-images.githubusercontent.com/34839284/141692788-068171aa-e211-48a4-92ce-3edcef8b6c5f.png)
   - If you do not enter a number or enter a number bewlow 8 you will be prompted to choose a numerical length from 8-128. 
-  Select if you desire uppercase letters, numbers, and special characters or symbols
+  - Then you will be asked to select if you desire uppercase letters, numbers, and special characters or symbols
 ![Screen Shot 2021-11-14 at 10 55 03 AM](https://user-images.githubusercontent.com/34839284/141692793-a2976e74-9a3c-48f4-bafa-53242401f34f.png)
   Click the "Generate Password" button
 ![Screen Shot 2021-11-14 at 10 55 11 AM](https://user-images.githubusercontent.com/34839284/141692798-2c049ba9-fb7e-4eda-a553-eda225a2598a.png)
