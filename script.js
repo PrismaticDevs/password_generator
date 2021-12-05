@@ -44,6 +44,7 @@ function randomize() {
             desiredLength = prompt('Last try! Length MUST be a number from 8-128.');
         }
     }
+    // Checks if length is less tahn 8 characters
     if (desiredLength < 8 || desiredLength > 128) {
         desiredLength = prompt('Please choose a length between 8-128.');
         if (desiredLength < 8) {
@@ -54,6 +55,7 @@ function randomize() {
             }
         }
     }
+    // Checks if length is more than 128 characters 
     if (desiredLength > 128) {
         desiredLength = prompt('Password must be between 8 and 128 characters');
         if (desiredLength > 128) {
